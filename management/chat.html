@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<title>Client Application - Feedback Form</title>
+	</head>
+	<body class="bg-gray-50">
+		<div class="min-h-screen pb-20">
+			<nav class="flex items-center justify-between p-6 bg-white border-b-2 shadow">
+				<a href="/" class="hidden text-xl font-bold uppercase lg:block hover:text-gray-600">Project Future</a>
+				<a href="/" class="text-2xl font-bold uppercase hover:text-gray-600 lg:hidden">PF</a>
+
+				<ul class="lg:flex items-center -mr-5 hidden">
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Students
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/portal.html">Student Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/application.html">Submit Application</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/draft-document.html">Submit Document Draft</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/final-document.html">Submit Final Document</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/evaluation.html">Complete Evaluation</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Clients
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/portal.html">Client Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/application.html">Submit Project Application</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/authorization.html">Submit Authorization</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/feedback.html">Submit Feedback</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/evaluation.html">Complete Evaluation</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Management Committee
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/portal.html">Management Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/form-teams.html">Form Teams</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/confrim-project.html">Accept/Reject Projects</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/chat.html">Send Team Message</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/confrim-student.html">Review Applications</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/record-interview.html">Record Interview Details</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Technical Committee
+
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/technical/feedback.html">Submit Feedback</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<div id="mobile-toggle" class="lg:hidden">
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+				</div>
+
+				<ul
+					id="mobile-list"
+					class="absolute w-full left-0 border shadow mt-56 flex flex-col items-start p-4 bg-white hidden lg:hidden"
+				>
+					<li class="relative mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/student/portal.html">Student</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/client/portal.html">Client</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/management/portal.html">Management Committee</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/technical/feedback.html">Technical Committee</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="container p-3 mx-auto mt-20">
+				<h1 class="mt-12 text-3xl text-center">Client Feedback Form</h1>
+
+				<div class="w-full bg-white border border-2 border-gray-300 rounded-lg shadow mt-10">
+					<div class="flex items-center border-b border-gray-300 pl-3 py-3">
+						<img class="h-10 w-10 rounded-full object-cover" src="../img/profile-pic.png" />
+						<span class="block ml-2 font-bold text-base text-gray-600">Student</span>
+					</div>
+					<div class="w-full overflow-y-auto p-10 relative" style="height: 500px">
+						<ul>
+							<li>
+								<div class="w-full flex justify-end">
+									<div class="bg-gray-100 rounded px-5 py-2 my-2 text-gray-700 relative" style="max-width: 300px">
+										<span class="block">How is the project and client?</span>
+										<span class="block text-xs text-left">10:12am</span>
+									</div>
+								</div>
+
+								<div class="w-full flex justify-start">
+									<div class="bg-gray-100 rounded px-5 py-2 my-2 text-gray-700 relative" style="max-width: 300px">
+										<span class="block">Going great!</span>
+										<span class="block text-xs text-right">12:32am</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="w-full py-3 px-3 flex items-center justify-between border-t border-gray-300">
+						<i class="text-gray-400 cursor-pointer fas fa-paperclip"></i>
+
+						<input
+							placeholder="Enter Message"
+							class="py-2 mx-3 pl-5 block w-full rounded-full bg-gray-100 outline-none focus:text-gray-700"
+							type="text"
+							required
+						/>
+
+						<i class="fas fa-paper-plane cursor-pointer"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="flex flex-col items-center justify-center p-12 bg-white">
+			<p class="text-xl font-bold uppercase">Project Future</p>
+
+			<hr class="w-full mt-5" />
+			<p id="copyright-date" class="mt-5"></p>
+		</footer>
+	</body>
+
+	<script>
+		// Current Footer Date
+		const copyrightDate = document.getElementById('copyright-date');
+		const date = new Date();
+		const currentYear = date.getFullYear();
+		copyrightDate.innerHTML = `&#169 ${currentYear}`;
+
+		// Dropdown Menu Click
+		const dropdowns = document.querySelectorAll('.dropdown');
+		const menus = document.querySelectorAll('.menu');
+
+		menus.forEach((li, index) => {
+			li.addEventListener('click', () => dropdowns[index].classList.toggle('hidden'));
+		});
+
+		// Close Dropdown on Outside click
+		window.addEventListener('click', () => {
+			const outsideClick = !event.target.matches('.menu');
+
+			if (outsideClick) {
+				for (dropdown of dropdowns) {
+					const isDropdownOpen = !dropdown.classList.contains('hidden');
+
+					if (isDropdownOpen) {
+						dropdown.classList.add('hidden');
+					}
+				}
+			}
+		});
+
+		// mobile toggle
+		const mobileToggle = document.getElementById('mobile-toggle');
+		const mobileList = document.getElementById('mobile-list');
+
+		mobileToggle.addEventListener('click', () => {
+			mobileList.classList.toggle('hidden');
+		});
+	</script>
+</html>

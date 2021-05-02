@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<title>Student Application - Draft Document</title>
+	</head>
+	<body class="bg-gray-50">
+		<div class="min-h-screen">
+			<nav class="flex items-center justify-between p-6 bg-white border-b-2 shadow">
+				<a href="/" class="hidden text-xl font-bold uppercase lg:block hover:text-gray-600">Project Future</a>
+				<a href="/" class="text-2xl font-bold uppercase hover:text-gray-600 lg:hidden">PF</a>
+
+				<ul class="lg:flex items-center -mr-5 hidden">
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Students
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/portal.html">Student Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/application.html">Submit Application</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/draft-document.html">Submit Document Draft</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/final-document.html">Submit Final Document</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/student/evaluation.html">Complete Evaluation</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Clients
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/portal.html">Client Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/application.html">Submit Project Application</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/authorization.html">Submit Authorization</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/feedback.html">Submit Feedback</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/client/evaluation.html">Complete Evaluation</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Management Committee
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/portal.html">Management Portal</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/form-teams.html">Form Teams</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/confrim-project.html">Accept/Reject Projects</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/chat.html">Send Team Message</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/confrim-student.html">Review Applications</a>
+							</li>
+							<li class="mt-2 whitespace-nowrap hover:text-black hover:underline">
+								<a href="/management/record-interview.html">Record Interview Details</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="relative mr-5 text-gray-500 cursor-pointer menu">
+						Technical Committee
+
+						<i class="ml-2 fas fa-angle-down"></i>
+
+						<ul class="absolute hidden p-4 text-sm bg-white shadow mt-7 dropdown">
+							<li class="whitespace-nowrap hover:text-black hover:underline">
+								<a href="/technical/feedback.html">Submit Feedback</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<div id="mobile-toggle" class="lg:hidden">
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+					<div class="w-8 bg-black my-1" style="height: 0.2rem"></div>
+				</div>
+
+				<ul
+					id="mobile-list"
+					class="absolute w-full left-0 border shadow mt-56 flex flex-col items-start p-4 bg-white hidden lg:hidden"
+				>
+					<li class="relative mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/student/portal.html">Student</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/client/portal.html">Client</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/management/portal.html">Management Committee</a>
+					</li>
+
+					<li class="relative mt-2 mr-5 text-gray-500 cursor-pointer hover:underline hover:text-black">
+						<a href="/technical/feedback.html">Technical Committee</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="container p-3 mx-auto mt-20">
+				<h1 class="mt-12 text-3xl text-center">Submit Document Drafts</h1>
+
+				<form class="flex flex-col items-center mt-12">
+					<div>
+						<p class="font-bold">What documents are you submitting? (select all that apply)</p>
+
+						<div class="mt-3">
+							<input type="checkbox" class="h-3 w-3 mr-2" id="project-charter" />
+							<label class="text-lg" for="project-charter">Project Charter</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="h-3 w-3 mr-2" id="report" />
+							<label class="text-lg" for="report">Report</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="h-3 w-3 mr-2" id="presentation" />
+							<label class="text-lg" for="presentation">Presentation</label>
+						</div>
+					</div>
+
+					<div class="flex flex-col items-center lg:flex-row w-full justify-evenly lg:max-w-4xl mt-16">
+						<div class="flex flex-col items-center w-full">
+							<h2 class="text-lg">Submit Document Drafts</h2>
+
+							<div
+								class="flex flex-col items-center justify-center w-full max-w-xs py-12 mt-5 bg-white border-2 border-gray-400 border-dashed"
+							>
+								<div class="relative flex items-center justify-center w-full h-full overflow-hidden rounded">
+									<input
+										id="file-input"
+										type="file"
+										multiple="multiple"
+										accept="image/png, image/jpeg"
+										class="z-0 w-4 h-2 overflow-hidden text-6xl opacity-0 cursor-pointer"
+									/>
+									<label
+										for="file-input"
+										class="z-10 inline-flex items-center justify-center p-4 text-sm font-bold text-white border-2 border-gray-400 rounded-full cursor-pointer sm:text-base"
+									>
+										<i class="text-lg text-gray-400 fas fa-arrow-up"></i>
+									</label>
+								</div>
+
+								<p class="mt-3 text-xl font-bold">Add Files</p>
+								<p class="mt-1 text-sm text-gray-400">Drag & Drop to upload</p>
+							</div>
+						</div>
+
+						<div class="flex flex-col items-center w-full mt-10 lg:mt-0">
+							<h2 class="text-lg">Submit Evaluation</h2>
+
+							<div
+								class="flex flex-col items-center justify-center w-full max-w-xs py-12 mt-5 bg-white border-2 border-gray-400 border-dashed"
+							>
+								<div class="relative flex items-center justify-center w-full h-full overflow-hidden rounded">
+									<input
+										id="file-input"
+										type="file"
+										multiple="multiple"
+										accept="image/png, image/jpeg"
+										class="z-0 w-4 h-2 overflow-hidden text-6xl opacity-0 cursor-pointer"
+									/>
+									<label
+										for="file-input"
+										class="z-10 inline-flex items-center justify-center p-4 text-sm font-bold text-white border-2 border-gray-400 rounded-full cursor-pointer sm:text-base"
+									>
+										<i class="text-lg text-gray-400 fas fa-arrow-up"></i>
+									</label>
+								</div>
+
+								<p class="mt-3 text-xl font-bold">Add Files</p>
+								<p class="mt-1 text-sm text-gray-400">Drag & Drop to upload</p>
+							</div>
+						</div>
+					</div>
+
+					<a href="../form-submit.html" class="px-12 py-2 mt-10 text-white bg-black rounded">Submit</a>
+				</form>
+			</div>
+		</div>
+
+		<footer class="flex flex-col items-center justify-center p-12 bg-white">
+			<p class="text-xl font-bold uppercase">Project Future</p>
+
+			<hr class="w-full mt-5" />
+			<p id="copyright-date" class="mt-5"></p>
+		</footer>
+	</body>
+
+	<script>
+		// Current Footer Date
+		const copyrightDate = document.getElementById('copyright-date');
+		const date = new Date();
+		const currentYear = date.getFullYear();
+		copyrightDate.innerHTML = `&#169 ${currentYear}`;
+
+		// Dropdown Menu Click
+		const dropdowns = document.querySelectorAll('.dropdown');
+		const menus = document.querySelectorAll('.menu');
+
+		menus.forEach((li, index) => {
+			li.addEventListener('click', () => dropdowns[index].classList.toggle('hidden'));
+		});
+
+		// Close Dropdown on Outside click
+		window.addEventListener('click', () => {
+			const outsideClick = !event.target.matches('.menu');
+
+			if (outsideClick) {
+				for (dropdown of dropdowns) {
+					const isDropdownOpen = !dropdown.classList.contains('hidden');
+
+					if (isDropdownOpen) {
+						dropdown.classList.add('hidden');
+					}
+				}
+			}
+		});
+
+		// mobile toggle
+		const mobileToggle = document.getElementById('mobile-toggle');
+		const mobileList = document.getElementById('mobile-list');
+
+		mobileToggle.addEventListener('click', () => {
+			mobileList.classList.toggle('hidden');
+		});
+	</script>
+</html>
